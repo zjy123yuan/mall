@@ -13,6 +13,7 @@ const routes = [
     path: '/', 
     //重定向
     redirect: '/home',
+    component: Home,
     meta:{
       title:'首页'
     }

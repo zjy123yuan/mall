@@ -50,18 +50,19 @@ export default {
     /* 设置弹性盒 */
     flex:1;
     text-align: center;
-    height: 49px;
+    height: 10vw;
     background-color: #f6f6f6;
     /* line-height: 49px; */
-    font-size: 14px;
+    font-size: 3vw;
+
   }
   .tabbaritem img{
-    width: 24px;
-    height: 24px;
+    width: 5vw;
+    height: 5vw;
     margin-top: 3px;
     vertical-align: middle;;
-    margin-bottom: 3px;
-    
+    margin: 3px 0; 
+
   }
 
 </style>

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import Maintabbar from 'components/content/Maintabbar/Maintabbar.vue'
+  import Maintabbar from 'components/content/maintabbar/Maintabbar.vue'
   export default {
     name: 'App',
     components: {
@@ -16,8 +16,5 @@
 </script>
 
 <style>
- body{
-    display: flex;
-  }
   @import url(./assets/css/base.css);
 </style>

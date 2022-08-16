@@ -7,7 +7,7 @@ module.exports = defineConfig({
         'assets':'@/assets',
         'common':'@/common',
         'components':'@/components',
-        'network':'@/metwork',
+        'network':'@/network',
         'views':'@/views'
       }
     }
