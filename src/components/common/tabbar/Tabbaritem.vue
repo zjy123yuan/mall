@@ -50,7 +50,7 @@ export default {
     /* 设置弹性盒 */
     flex:1;
     text-align: center;
-    height: 10vw;
+    height: 6vh;
     background-color: #f6f6f6;
     /* line-height: 49px; */
     font-size: 3vw;

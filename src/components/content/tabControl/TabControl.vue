@@ -35,9 +35,9 @@ export default {
     display: flex;
     text-align: center;
     font-size: 4vw;
-    height: 10vw;
-    line-height: 10vw;
-    z-index: 999;
+    height: 6vh;
+    line-height: 6vh;
+    /* z-index: 8; */
   }
   .tab_control div{
     flex: 1;

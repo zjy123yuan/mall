@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-    <tabbar>
+    <tabbar >
       <tabbaritem path="/home" activecolor="rgb(255,17,119)">
         <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
         <img slot="item-active" src="~assets/img/tabbar/home_active.svg" alt="">
@@ -41,5 +41,6 @@ export default {
 </script>
 
 <style  scoped>
+
 
 </style>

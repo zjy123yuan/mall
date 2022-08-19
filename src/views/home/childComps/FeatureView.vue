@@ -19,6 +19,6 @@ export default {
   
 <style  scoped>
   .feature img{
-    width: 100%;
+    width: 100vw;
   }
 </style>

@@ -2,7 +2,7 @@
 <template>
     <swiper>
       <swiper-item v-for="item in banners" :key="item.title">
-        <a :href="item.link"><img :src="item.image" alt=""></a>
+        <a :href="item.link"><img :src="item.image" alt="" @load="imgeLoad"></a>
      </swiper-item>
     </swiper>
 </template>
@@ -27,6 +27,11 @@ export default {
     Swiper,
     SwiperItem,
   },
+  methods:{
+    imgeLoad(){
+      this.$emit('swiperImgeLoad')
+    }
+  }
 }
 </script>
 

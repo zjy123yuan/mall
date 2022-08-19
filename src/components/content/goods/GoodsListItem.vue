@@ -1,7 +1,7 @@
 <!--  -->
 <template>
-  <div class="goods-item">
-    <img :src="goodsItem.show.img" alt="">
+  <div class="goods-item" @click="itemClick">
+    <img :src="goodsImage" alt="" @load="imgeLoad">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span>
@@ -24,6 +24,24 @@ export default {
         return {}
       }
     }
+  },
+  computed:{
+    goodsImage(){
+      return this.goodsItem.image || this.goodsItem.show.img
+    }
+  },
+  methods:{
+    imgeLoad(){
+      this.$bus.$emit('itemImgeLoad')
+    },
+    itemClick(){
+      this.$router.push({
+        path:'/detail',
+        query:{
+          iid:this.goodsItem.iid
+        }
+      })
+    }
   }
 }
 </script>
@@ -32,7 +50,8 @@ export default {
   .goods-item{ 
     position: relative;
     width: 48vw;
-    padding-bottom: 10vw;
+    padding-bottom: 6vh;
+    margin: auto 0;
   }
   .goods-item img{
     width: 48vw;

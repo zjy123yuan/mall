@@ -21,11 +21,11 @@ export default {
   .nav-bar{
     font-size: 5vw;
     display: flex;
-    line-height:10vw;
-    height:10vw;
+    line-height:6vh;
+    height:6vh;
     /* background-color: pink; */
     text-align: center;
-    box-shadow: 0 1px 1px rgba(1, 1, 1, .3);
+    box-shadow: 0 1px 1px rgba(1, 1, 1, .1);
   }
   .right,.left{
     width: 15vw;
