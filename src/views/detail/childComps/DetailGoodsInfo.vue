@@ -10,7 +10,7 @@
         <div class="info-list">
           <img v-for="(item,index) in detailInfo.detailImage[0].list" 
               :src="item" 
-              :key="index"
+              :key="item"
               @load="loadImg"
               alt="">
         </div>
@@ -98,6 +98,9 @@ export default {
 .info-key {
   padding: 0.42rem 0.34rem;
   text-align: center;
+}
+.info-list{
+  width: 100%;
 }
 .info-list img {
   width: 100%;

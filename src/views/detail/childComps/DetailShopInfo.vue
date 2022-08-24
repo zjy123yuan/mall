@@ -116,6 +116,7 @@
   .shop-middle-right table {
     width: 33vw;
     margin-left: 10vw;
+    
   }
 
   .shop-middle-right table td {

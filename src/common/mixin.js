@@ -13,6 +13,5 @@ export const itemListenterMixin = {
           refresh()
         }
         this.$bus.$on('itemImgeLoad',this.ItemListener)
-    
   }
 }

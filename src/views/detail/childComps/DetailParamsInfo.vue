@@ -2,11 +2,16 @@
 <template>
   <div id="param-info" v-if="Object.keys(paramInfo).length !==0">
     <div class="prama-title">{{paramInfo.info.key}}</div>
-    <table v-for="(table,index) in paramInfo.rule.tables" :key="index" class="info-size">
+    <div v-if="this.paramInfo.rule!=null&&Object.keys(this.paramInfo.rule).length !==0">
+          <table 
+          v-for="(table,index) in this.paramInfo.rule.tables" 
+          :key="index"  
+          class="info-size" >
       <tr v-for="(tr,indey) in table" :key="indey">
         <td v-for="(td,indez) in tr" :key="indez">{{td}}</td>
       </tr>
     </table>
+    </div>
     <table class="info-prama">
       <tr v-for="(info,index) in paramInfo.info.set">
         <th>{{info.key}}</th>
@@ -34,6 +39,9 @@ export default {
     return {
     }
   },
+  computed:{
+
+  }
 
 }
 </script>

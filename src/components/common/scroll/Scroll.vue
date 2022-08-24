@@ -27,7 +27,6 @@ export default {
     }
   },
    mounted(){
- 
     this.scroll = new BScroll(this.$refs.homescroll,{
       //0和1不监听，2监听手指滑动，3监听惯性
       probeType:this.probeType,
@@ -36,8 +35,7 @@ export default {
       //监听除了按钮以外的点击生效
       click:true,
       //监听网页DOM结构的变化
-      observeDOM: true
-      
+      observeDOM: true    
     })
     //监听滚动
     if(this.probeType>1){

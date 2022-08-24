@@ -13,8 +13,8 @@
             :pull-up-load="true"
             @pullingUp="loadMore">
       <homeSwiper :banners="banners" class="homeswiper" @swiperImgeLoad.once="swiperImgeLoad"></homeSwiper>
-      <RecommendView :recommends="recommends"></RecommendView>
-      <FeatureView></FeatureView>
+      <RecommendView :recommends="recommends" @swiperImgeLoad.once="swiperImgeLoad"></RecommendView>
+      <FeatureView @swiperImgeLoad.once="swiperImgeLoad"></FeatureView>
       <TabControl :titles="['流行','新款','精选']"  @tabClick="tabClick" ref="tabControl2" ></TabControl>
       <GoodsList :goods='showGoods'></GoodsList>
     </Scroll>

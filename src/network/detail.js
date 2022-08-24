@@ -25,8 +25,10 @@ export class Goods{
     this.columns = columns
     //商家特点，发货快，无理由退换等
     this.services= services
-    //价格数字
+    //价格数字,最低价格
     this.realPrice = itemInfo.lowNowPrice
+    //简介
+    this.desc = itemInfo.desc
   }
 }
 

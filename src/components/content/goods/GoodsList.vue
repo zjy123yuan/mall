@@ -30,9 +30,11 @@ export default {
 <style  scoped>
 .goods{
   display: flex;
-  width: 100vw;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: space-evenly ;
   padding: 2vh  0;
+  align-items: center;
+  align-content: space-around;
 }
 </style>

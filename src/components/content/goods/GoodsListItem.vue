@@ -1,7 +1,8 @@
 <!--  -->
 <template>
   <div class="goods-item" @click="itemClick">
-    <img :src="goodsImage" alt="" @load="imgeLoad">
+    <!-- <div>{{goodsItem}}</div> -->
+    <img v-lazy="goodsImage" alt="" @load="imgeLoad">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span>
@@ -27,7 +28,7 @@ export default {
   },
   computed:{
     goodsImage(){
-      return this.goodsItem.image || this.goodsItem.show.img
+      return this.goodsItem.img || this.goodsItem.image || this.goodsItem.show.img 
     }
   },
   methods:{
@@ -49,12 +50,12 @@ export default {
 <style  scoped>
   .goods-item{ 
     position: relative;
-    width: 48vw;
+    width: 48%;
     padding-bottom: 6vh;
     margin: auto 0;
   }
   .goods-item img{
-    width: 48vw;
+    width: 100%;
     border-radius: 5px;
   }
   .goods-info{
