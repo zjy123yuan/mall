@@ -140,6 +140,7 @@ export default {
     },
     //监听标题的点击
     titleClick(index){
+      //先进行刷新
       this.$refs.scroll.refresh();
       //每次点击都获取不太好
       // this.themeTopYs = [] ;
@@ -151,9 +152,12 @@ export default {
       
     },
     contentScroll(position){
+      //获取当前y
       const positionY = -position.y;
+      //遍历保存组件顶部坐标的数组
       let length = this.themeTopYs.length;
       for(let i = 0;i<length-1;i++){
+        //此处做优化了n次，原来的条件很长，进行了拆分
         if(this.currentIndex!=i){
           if( positionY >= this.themeTopYs[i]&&positionY<this.themeTopYs[i+1]){
             this.currentIndex = i;

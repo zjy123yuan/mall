@@ -28,11 +28,12 @@ export default {
   computed:{
     ...mapGetters(['cartList']),
     totalPrice(){
+      //找出所有选中的商品，对其价格进行累加，最后拼接字符串
       return '￥'+ this.cartList.filter(item=>{
         return item.checked
       }).reduce((preValue,item)=>{
         return preValue + item.price*item.count
-      },0).toFixed(2)
+      },0).toFixed(2)//保留两位小数
     },
     checkCount(){
       return this.cartList.reduce((preValue,item)=>{
@@ -58,7 +59,7 @@ export default {
       //这种简化方案不可用
       // this.cartList.forEach(element => {
       //     element.checked = !this.IsSelectAll
-      //   });
+      //   }); 
     },
     calcClick(){
       if(!this.cartList.find(item=>item.checked)){

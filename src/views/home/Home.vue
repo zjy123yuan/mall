@@ -136,6 +136,7 @@ created(){
     //监听轮播图的加载
     swiperImgeLoad(){
       //获取tabcontrol的offsettop
+      console.log("----")
       this.tabOffsetTop=this.$refs.tabControl2.$el.offsetTop
     },
 

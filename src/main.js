@@ -12,7 +12,7 @@ Vue.prototype.$bus = new Vue()
 //全局弹窗
 Vue.use(toast)
 //解决移动端300延迟
-// fastclick.attach(document.body)
+fastclick.attach(document.body)
 
 //使用图片懒加载
 Vue.use(VueLazyLoad,{
